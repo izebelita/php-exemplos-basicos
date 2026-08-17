@@ -1,0 +1,24 @@
+<?php
+
+// Declarações das variáveis 
+$idade = 19;
+$temDocumento =true;
+
+// Condicional com operador
+if ($idade >=18 &&$temDocumento) {
+    echo "Pode tirar a carteira";
+} else {
+    echo "Não pode tirar a carteira";
+}
+
+// Declaração das variáveis 
+$feriado = false;
+$fimDeSemana = true;
+
+// Condicional com operador (OU)
+if ($feriado || $fimDeSemana) {
+    echo "\n Hoje não tem aula";
+} else {
+    echo "\n Não é feriado";
+}
+
