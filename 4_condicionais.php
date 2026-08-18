@@ -1,22 +1,33 @@
 <?php
 
-//Verificar se formulário foi enviado ($_SEVER)
-//Variavel nativa de PHP
-if($_SEVER['REQUESTE_METHOD']=='POST'){
-    //RECEBE A SENHA ENVIADA
+// Verifica se formulário foi enviado ($_SERVER)
+// Variável nativa de PHP
+if($_SERVER['REQUEST_METHOD']=='POST') {
+    // Recebe a senha enviada
     $senha = $_POST['senha'];
 
-    if($senha == '12345'){
-        //Redireciona para pg de Boas-vindas
-        header("Location 4b_bem_vindo.php");
+    if($senha =='12345') {
+        // Redireciona para página de Boas-vindas
+        header("Location: 4b_bem_vindo.php");
         exit();
-        else{
-            $erro= "Senha incorreta. Tente novamente"
-        }
-                }
+    } else { 
+        $erro = "Senha incorreta. Tente novamente";
+    }
 }
+?>
 
 <!DOCTYPE html>
-<html lang = "pt-br">
+<html lang ="pt-br">
 <head>
-        
+    <meta charset="UTF-8">
+    <title>Página de login</title>
+</head>
+<body>
+    <h2>Digite a senha</h2>
+    <form action="" method="post">
+        <label for="">Senha:</label>
+        <input type="password" name="senha" required><br>
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+</html>
